@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import Welcome from "./Welcome";
+import CommandCenter from "./CommandCenter";
 import MapPage from "./MapPage";
 
 function App() {
-  const [entered, setEntered] = useState(false);
+  const [stage, setStage] = useState("welcome"); // welcome → command → map
 
-  return (
-    <>
-      {!entered ? (
-        <Welcome onEnter={() => setEntered(true)} />
-      ) : (
-        <MapPage />
-      )}
-    </>
-  );
+  if (stage === "welcome") return <Welcome onEnter={() => setStage("command")} />;
+  if (stage === "command") return <CommandCenter onEnterMap={() => setStage("map")} />;
+  if (stage === "map") return <MapPage />;
 }
 
 export default App;
