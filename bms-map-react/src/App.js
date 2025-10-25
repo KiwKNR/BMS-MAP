@@ -3,12 +3,25 @@ import Welcome from "./Welcome";
 import CommandCenter from "./CommandCenter";
 import MapPage from "./MapPage";
 
-function App() {
-  const [stage, setStage] = useState("welcome"); // welcome → command → map
+export default function App() {
+  const [stage, setStage] = useState("welcome"); // welcome | command | map
 
-  if (stage === "welcome") return <Welcome onEnter={() => setStage("command")} />;
-  if (stage === "command") return <CommandCenter onEnterMap={() => setStage("map")} />;
-  if (stage === "map") return <MapPage />;
+  return (
+    <>
+      {stage === "welcome" && (
+        <Welcome onEnter={() => setStage("command")} />
+      )}
+
+      {stage === "command" && (
+        <CommandCenter
+          onLaunch={() => setStage("map")}
+          onBack={() => setStage("welcome")}
+        />
+      )}
+
+      {stage === "map" && (
+        <MapPage onBackToCommand={() => setStage("command")} />
+      )}
+    </>
+  );
 }
-
-export default App;

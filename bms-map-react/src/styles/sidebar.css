@@ -1,0 +1,100 @@
+/* ==========================
+   Sidebar (Command Panel)
+   ========================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px;
+  bottom: 0;
+  background: #071014;
+  border-right: 1px solid rgba(0, 255, 170, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 1500;
+  font-family: "Share Tech Mono", monospace;
+  color: #aaffdd;
+}
+
+.sidebar-section {
+  margin-bottom: 18px;
+}
+
+.sidebar-title {
+  color: #00ffaa;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid rgba(0, 255, 170, 0.1);
+  padding-bottom: 2px;
+}
+
+.mission-select {
+  width: 100%;
+  padding: 4px;
+  background: #09171a;
+  color: #bff;
+  border: 1px solid rgba(0, 255, 170, 0.1);
+  border-radius: 4px;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.mission-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.mission-actions button {
+  background: transparent;
+  border: 1px solid rgba(0, 255, 170, 0.2);
+  color: #00ffaa;
+  font-size: 11px;
+  padding: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mission-actions button:hover {
+  background: rgba(0, 255, 170, 0.15);
+  box-shadow: 0 0 8px #00ffaa55;
+}
+
+/* Units / Targets */
+.icon-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.icon-grid button {
+  background: transparent;
+  color: #bff;
+  border: 1px solid rgba(0, 255, 170, 0.15);
+  border-radius: 4px;
+  padding: 5px 0;
+  font-size: 12px;
+  cursor: grab;
+  transition: 0.2s;
+}
+
+.icon-grid button:hover {
+  background: rgba(0, 255, 170, 0.1);
+}
+
+/* Commander Section */
+.commander-title {
+  color: #00ffaa;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.commander-name {
+  font-size: 13px;
+  color: #e6fff2;
+  font-weight: bold;
+}

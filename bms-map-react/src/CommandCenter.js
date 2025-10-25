@@ -1,30 +1,24 @@
 import React from "react";
 import "./styles/command.css";
 
-function CommandCenter({ onEnterMap }) {
+export default function CommandCenter({ onLaunch, onBack }) {
   return (
-    <div className="command-container">
-      <h1 className="command-title">COMMAND CENTER</h1>
+    <div className="command-screen">
+      {/* ส่วนหัว */}
+      <header className="command-header">
+        <h1 className="command-title">Command Center</h1>
+        <p className="command-desc">System Status: Operational</p>
+      </header>
 
-      <div className="mission-brief">
-        <h2>Mission Briefing</h2>
-        <p>Operation Falcon — Secure perimeter around sector Bravo.</p>
-        <p>Weather: Clear | Visibility: 98% | Time: 0600 hrs</p>
+      {/* ส่วนปุ่มควบคุม */}
+      <div className="command-controls">
+        <button className="command-btn back" onClick={onBack}>
+          ◀ Back
+        </button>
+        <button className="command-btn launch" onClick={onLaunch}>
+          ▶ Launch Mission
+        </button>
       </div>
-
-      <div className="systems-grid">
-        <button>🎯 Target Tracking</button>
-        <button>🛰️ UAV Recon</button>
-        <button>💥 Artillery Range</button>
-        <button>🧭 Terrain Analysis</button>
-        <button>⚙️ Logistics Route</button>
-      </div>
-
-      <button className="enter-map" onClick={onEnterMap}>
-        ▶ Launch Mission
-      </button>
     </div>
   );
 }
-
-export default CommandCenter;

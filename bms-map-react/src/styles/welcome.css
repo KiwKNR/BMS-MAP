@@ -1,70 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap');
-
-.welcome-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+/* Welcome Screen Layout */
+.welcome-screen {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  background: radial-gradient(circle at center, #0a0f0a 0%, #000000 80%);
-  background-size: 200% 200%;
-  animation: bgMove 6s ease-in-out infinite alternate;
-  color: #00ff9d;
-  font-family: 'Orbitron', sans-serif;
-  text-align: center;
+  height: 100vh;
+  background: #0b0f13;
+  color: #e6fff2;
+  font-family: "Orbitron", sans-serif;
+  overflow: hidden;
 }
 
-@keyframes bgMove {
-  from {
-    background-position: top left;
-  }
-  to {
-    background-position: bottom right;
-  }
+.welcome-header {
+  width: 100%;
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.welcome-container {
-  animation: fadeIn 2s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.title {
-  font-size: 3em;
-  font-weight: 800;
-  text-shadow: 0 0 15px #00ff9d, 0 0 40px #00ff9d;
-  letter-spacing: 2px;
+.welcome-logo {
+  font-size: 44px;
+  color: #00ffaa;
   margin: 0;
+  text-shadow: 0 0 15px #00ffaa60;
+  letter-spacing: 1px;
 }
 
-.subtitle {
-  font-size: 1.5em;
-  color: #aaffd5;
-  text-shadow: 0 0 10px #00ff9d;
-  margin-bottom: 40px;
+.welcome-subtitle {
+  font-size: 14px;
+  color: #99c9b8;
+  margin-top: 5px;
 }
 
-.enter-btn {
-  background: none;
-  border: 2px solid #00ff9d;
-  color: #00ff9d;
-  padding: 15px 40px;
-  font-size: 1em;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  border-radius: 6px;
-  box-shadow: 0 0 10px #00ff9d;
+.welcome-content {
+  margin-bottom: 120px;
 }
 
-.enter-btn:hover {
-  background: #00ff9d;
+.welcome-btn {
+  background: #00ffaa;
   color: #000;
-  box-shadow: 0 0 20px #00ff9d, 0 0 40px #00ff9d;
+  border: none;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.welcome-btn:hover {
+  background: #00cc88;
+  transform: translateY(-2px);
+}
+/* Command Center Page */
+.command-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background: #0a0e11;
+  color: #e6fff2;
+  font-family: "Orbitron", sans-serif;
+}
+
+.command-header {
+  width: 100%;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.command-title {
+  font-size: 40px;
+  color: #00ffaa;
+  margin: 0;
+  text-shadow: 0 0 15px #00ffaa80;
+}
+
+.command-desc {
+  font-size: 14px;
+  color: #99c9b8;
+  margin-top: 6px;
+  letter-spacing: 1px;
+}
+
+.command-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-bottom: 120px;
+}
+
+.command-btn {
+  background: transparent;
+  color: #00ffaa;
+  border: 1.5px solid #00ffaa50;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 26px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+}
+
+.command-btn:hover {
+  background: #00ffaa22;
+  box-shadow: 0 0 15px #00ffaa55;
+}
+
+.command-btn.back {
+  color: #ffaa88;
+  border-color: #ffaa8844;
+}
+
+.command-btn.back:hover {
+  background: #ffaa8820;
+  box-shadow: 0 0 15px #ffaa8844;
+}
+
+.command-btn.launch {
+  color: #00ffaa;
+  border-color: #00ffaa44;
 }

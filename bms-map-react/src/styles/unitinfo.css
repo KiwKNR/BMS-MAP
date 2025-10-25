@@ -1,0 +1,69 @@
+/* ==========================
+   Unit Information Panel
+   ========================== */
+.unit-panel {
+  position: fixed;
+  top: 60px;
+  right: 25px;
+  width: 240px;
+  background: rgba(5, 15, 15, 0.85);
+  border: 1px solid rgba(0, 255, 170, 0.15);
+  border-radius: 8px;
+  padding: 10px 14px;
+  z-index: 2000;
+  color: #cfeedd;
+  font-family: "Share Tech Mono", monospace;
+  transform: translateX(260px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 170, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+.unit-panel.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.unit-header {
+  color: #00ffaa;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 255, 170, 0.15);
+  padding-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+.unit-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.unit-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.unit-label {
+  color: #9fe0b3;
+  font-weight: 600;
+}
+
+.unit-value {
+  color: #e6fff2;
+}
+
+.unit-value.online {
+  color: #00ffaa;
+  text-shadow: 0 0 6px #00ffaa55;
+}
+
+.unit-empty {
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
+  font-size: 13px;
+}

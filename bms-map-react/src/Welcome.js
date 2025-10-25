@@ -1,20 +1,23 @@
 import React from "react";
 import "./styles/welcome.css";
 
-function Welcome({ onEnter }) {
+export default function Welcome({ onEnter }) {
   return (
-    <div className="welcome-body">
-      <div className="welcome-container">
-        <h1 className="title">
-          Battlefield <br /> Management System
-        </h1>
-        <p className="subtitle">(BMS)</p>
-        <button className="enter-btn" onClick={onEnter}>
-          Enter the Battlefield
+    <div className="welcome-screen">
+      {/* โลโก้มุมบนซ้าย */}
+      <header className="welcome-header">
+        <h1 className="welcome-logo">BMS</h1>
+        <span className="welcome-subtitle">
+          Battlefield Management System
+        </span>
+      </header>
+
+      {/* ปุ่มเข้าสู่ระบบ */}
+      <main className="welcome-content">
+        <button className="welcome-btn" onClick={onEnter}>
+          Enter Command Center
         </button>
-      </div>
+      </main>
     </div>
   );
 }
-
-export default Welcome;

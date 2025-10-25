@@ -1,10 +1,81 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+.map-page {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: #070b0d;
 }
 
 #map {
-  height: 100vh;
-  width: 100%;
+  position: absolute;
+  left: 120px;
+  right: 0;
+  top: 45px;
+  bottom: 0;
+  z-index: 1;
+}
+
+.back-button {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  z-index: 2000;
+  background: rgba(0, 255, 170, 0.05);
+  border: 1.5px solid #00ffaa60;
+  color: #00ffaa;
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;            /* ลดขนาดตัวอักษร */
+  padding: 6px 12px;          /* ลด padding */
+  border-radius: 5px;         /* ขอบมนขึ้น */
+  cursor: pointer;
+  transition: 0.25s;
+  text-shadow: 0 0 4px #00ffaa55;
+}
+
+.back-button:hover {
+  background: rgba(0, 255, 170, 0.15);
+  box-shadow: 0 0 15px #00ffaa55;
+  transform: translateY(-1px);  /* ทำให้ดูมีมิติ */
+}
+
+.back-button:active {
+  transform: translateY(1px);   /* เมื่อคลิกจะดันลง */
+}
+
+.selected-unit {
+  filter: drop-shadow(0 0 10px #00ffaa);
+}
+
+.popup-delete {
+  background: #ff4a4a;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-marker {
+  font-size: 18px;
+  text-shadow: 0 0 6px #00ffaa55;
+}
+.mapmode-toggle {
+  position: absolute;
+  top: 55px;
+  right: 25px;
+  background: rgba(0, 255, 170, 0.08);
+  border: 1px solid rgba(0, 255, 170, 0.4);
+  border-radius: 8px;
+  color: #00ffaa;
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-shadow: 0 0 4px #00ffaa55;
+  backdrop-filter: blur(3px);
+}
+
+.mapmode-toggle:hover {
+  background: rgba(0, 255, 170, 0.25);
+  transform: translateY(-1px);
 }
